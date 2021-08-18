@@ -1,0 +1,120 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+h1,h2{
+  color: hsl(224, 36%, 15%);
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  background: hsl(224, 36%, 15%);
+}
+header h1{
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #EEE;
+}
+header ul{
+  display: flex;
+  list-style: none;
+}
+header li{
+  padding: 0 10px;
+}
+header a {
+  text-decoration: none;
+  /* text-transform: uppercase; */
+  color: #EEE;
+}
+@media (max-width: 760px){
+  header ul{
+    display: none;
+  }
+}
+/* section */
+#intro{
+  background: url(img/bg-person.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#intro div{
+  width: 100%;
+  background: hsla(224, 36%, 15%,0.7);
+  height: 300px;
+}
+/* objective */
+#objective,
+#contact,
+#about-me {
+  padding: 30px 10px;
+}
+#objective p,
+#contact p,
+#about-me p{
+  padding: 10px;
+}
+#about-me,
+#skills {
+  color: #EEE;
+  background: hsl(224, 36%, 15%);
+}
+#about-me h1,
+#skills h1 {
+  color: #EEE;
+}
+#about-me p{
+  letter-spacing: 1px;
+  line-height: 1.4rem;
+  text-align: justify;
+}
+@media (max-width: 500px){
+  #about-me p{
+    text-align: left;
+  }
+}
+/* Talent */
+section.resume-talent{
+  margin: 70px 0;
+}
+.title{
+  text-align: center;
+}
+.title h1,
+.title h2{
+  font-size: 2rem;
+}
+#education,
+#experience,
+#skills{
+  padding: 50px 10px;
+}
+#education li,
+#experience li{
+  padding: 20px;
+}
+#education small,
+#experience small{
+  font-weight: bold;
+}
+#education span{
+  padding-left: 10px;
+}
+#education div{
+  padding: 5px 0 5px 120px;
+  line-height: 2rem;
+}
+#skills .s1 {
+  padding: 20px;
+}
+#skills label {
+  display: block;
+}
+#association {
+  text-align: center;
+  padding-top: 50px;
+}
