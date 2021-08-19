@@ -4,8 +4,8 @@
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
 }
-h1,h2{
-  color: hsl(224, 36%, 15%);
+html{
+  scroll-behavior: smooth;
 }
 header{
   display: flex;
@@ -31,6 +31,9 @@ header a {
   /* text-transform: uppercase; */
   color: #EEE;
 }
+h1 img{
+  width: 30px;
+}
 @media (max-width: 760px){
   header ul{
     display: none;
@@ -45,7 +48,48 @@ header a {
 #intro div{
   width: 100%;
   background: hsla(224, 36%, 15%,0.7);
-  height: 300px;
+  height: 70vh;
+}
+.title{
+  text-align: center;
+  padding: 300px 0 10px 0;
+}
+.title h1,
+.title h2{
+  font-size: 2rem;
+  color: #fff;
+}
+.title p{
+  padding: 15px 0;
+}
+.title a{
+  text-decoration: none;
+  border: 1px solid #FFF;
+  padding: 5px;
+  color: #fff;
+}
+/* skate */
+section.skate{
+  margin: 100px 0 20px 0;
+}
+.skate.active{
+  height: 0;
+  overflow: hidden;
+}
+.skate-boi{
+  width: 150px;
+  animation: skate 8s linear both 3;
+}
+.skate-boi img{
+  width: 100%;
+}
+@keyframes skate {
+  from{
+    transform: translateX(-200px);
+  }
+  to{
+    transform: translateX(1000px);
+  }
 }
 /* objective */
 #objective,
@@ -63,14 +107,25 @@ header a {
   color: #EEE;
   background: hsl(224, 36%, 15%);
 }
-#about-me h1,
-#skills h1 {
-  color: #EEE;
+#about-me h1{
+  color: #fff;
+  border-bottom: 1px solid #999;
+}
+#skills h1,
+#education h1, #experience h1 {
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  color: hsl(224, 36%, 15%);
+  font-size: 2rem;
+  border-bottom: 1px solid hsl(224, 36%, 15%);
 }
 #about-me p{
+  margin: 0 auto;
   letter-spacing: 1px;
-  line-height: 1.4rem;
-  text-align: justify;
+  line-height: 1.7rem;
+  /* text-align: justify; */
+  max-width: 600px;
 }
 @media (max-width: 500px){
   #about-me p{
@@ -81,38 +136,69 @@ header a {
 section.resume-talent{
   margin: 70px 0;
 }
-.title{
-  text-align: center;
+/* #education, */
+#education{
+  margin: 50px 0;
 }
-.title h1,
-.title h2{
-  font-size: 2rem;
+.edu-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 30px;
+  justify-content: center;
 }
-#education,
-#experience,
-#skills{
-  padding: 50px 10px;
+.edu-card .card{
+  max-width: 400px;
+  border: 1px solid hsl(224, 36%, 15%);
+  /* vertical-align: top; */
 }
-#education li,
-#experience li{
+.edu-card .card-text{
+  color: #fff;
+  background: hsl(224, 36%, 15%);
+}
+.card img{
+  width: 100%;
+}
+@media (max-width: 800px){
+  .edu-card{
+    grid-template-columns: 1fr;
+  }
+}
+/* experience */
+#experience{
+
+}
+.exp-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
   padding: 20px;
 }
-#education small,
-#experience small{
-  font-weight: bold;
+.exp-card .card{
+  position: relative;
+  max-width: 500px;
+  border: 1px solid hsl(224, 36%, 15%);
+  /* vertical-align: top; */
 }
-#education span{
-  padding-left: 10px;
+.exp-card .card-text{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: #fff;
+  background: hsla(224, 36%, 15%,0.5);
 }
-#education div{
-  padding: 5px 0 5px 120px;
-  line-height: 2rem;
+.card img{
+  width: 100%;
 }
-#skills .s1 {
-  padding: 20px;
+@media (max-width: 700px){
+  .exp-card {
+    grid-template-columns: 1fr 1fr;
+  }
 }
-#skills label {
-  display: block;
+@media (max-width: 500px){
+  .exp-card {
+    grid-template-columns: 1fr;
+  }
 }
 #association {
   text-align: center;
