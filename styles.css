@@ -52,7 +52,7 @@ h1 img{
 }
 .title{
   text-align: center;
-  padding: 300px 0 10px 0;
+  padding: 250px 0 10px 0;
 }
 .title h1,
 .title h2{
@@ -71,6 +71,7 @@ h1 img{
 /* skate */
 section.skate{
   margin: 100px 0 20px 0;
+  overflow: hidden;
 }
 .skate.active{
   height: 0;
@@ -88,7 +89,7 @@ section.skate{
     transform: translateX(-200px);
   }
   to{
-    transform: translateX(1000px);
+    transform: translateX(1300px);
   }
 }
 /* objective */
