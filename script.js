@@ -1,5 +1,5 @@
 const skate = document.querySelector('.skate');
 
-setTimeout( () => {
+setTimeout(() => {
   skate.classList.add('active');
-},3000)
+}, 30000);

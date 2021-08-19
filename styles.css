@@ -74,6 +74,7 @@ section.skate{
   overflow: hidden;
 }
 .skate.active{
+  transition: 0.5 ease-in-out;
   height: 0;
   overflow: hidden;
 }
@@ -183,10 +184,11 @@ section.resume-talent{
 }
 .exp-card .card-text{
   position: absolute;
+  padding: 20px;
   top: 0;
   width: 100%;
   color: #fff;
-  background: hsla(224, 36%, 15%,0.5);
+  background: rgba(1, 0, 0, 0.7);
 }
 .card img{
   width: 100%;
