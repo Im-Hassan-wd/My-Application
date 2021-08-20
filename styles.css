@@ -35,12 +35,43 @@ header a:hover{
   color: #999;
   letter-spacing: 1px;
 }
+header svg{
+  color: #FFF;
+  cursor: pointer;
+  display: none;
+}
 h1 img{
   width: 30px;
 }
 @media (max-width: 760px){
+  header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+  }
   header ul{
-    display: none;
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background: hsl(224, 36%, 15%);
+    height: 0;
+    overflow: hidden;
+  }
+  header ul.active{
+    transition: all 0.5s ease-in-out;
+    height: initial;
+  }
+  header li {
+    border-bottom: 1px solid #999;
+    padding: 10px 5px;
+  }
+  .nav-search.active{
+    height: 440px;
+  }
+  header svg{
+    display: block;
   }
 }
 /* section */
@@ -104,7 +135,9 @@ section.skate{
 @media (max-width:400px){
   .skate-boi{
     width: 150px;
-    /* animation: skate 4s linear both 3; */
+  }
+  #intro div{
+    /* height: 50vh; */
   }
 }
 /* objective */

@@ -1,6 +1,14 @@
 const skateSection = document.querySelector('.skate');
 const skateboarder = document.querySelector('.skate-boi');
+const burger = document.querySelector('header svg');
+const nav = document.querySelector('header ul');
 
+// Navigation menu
+burger.addEventListener('click',() => {
+  nav.classList.toggle('active');
+})
+
+// hide skateborder
 setTimeout(()=>{
   skateSection.classList.add('active');
 },13000);
