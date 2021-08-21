@@ -11,7 +11,7 @@ burger.addEventListener('click',() => {
 // hide skateborder
 setTimeout(()=>{
   skateSection.classList.add('active');
-},13000);
+},16000);
 
 // skate animation
 const showSkater = () => {

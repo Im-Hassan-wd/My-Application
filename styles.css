@@ -176,9 +176,28 @@ section.skate{
   /* text-align: justify; */
   max-width: 600px;
 }
+.social{
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+.social a{
+  text-decoration: none;
+  padding: 10px 50px;
+  cursor: pointer;
+}
+.social img{
+  width: 30px;
+}
+.social img.site{
+  width: 50px;
+}
 @media (max-width: 500px){
   #about-me p{
     text-align: left;
+  }
+  .social a{
+    padding: 10px;
   }
 }
 /* Talent */
@@ -225,9 +244,8 @@ section.resume-talent{
 }
 .exp-card .card{
   position: relative;
-  max-width: 500px;
-  border: 1px solid hsl(224, 36%, 15%);
-  /* vertical-align: top; */
+  /* max-width: 00px; */
+  box-shadow: 2px 2px 4px hsl(224, 36%, 15%);
 }
 .exp-card .card-text{
   position: absolute;
