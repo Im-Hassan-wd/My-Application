@@ -41,46 +41,34 @@ const nextBtn = document.querySelector('#nextBtn');
 let counter = 1;
 const size = 700;
 
+// slider.style.transform = 'translateX(' + (-size*counter) + 'px)';
 
-slider.style.transform = 'translateX(' + (-size*counter) + 'px)';
+nextBtn.addEventListener('click', () => {
+  if(counter >= carouselImages.length - 1) return;
+  slider.style.transition = 'transform 0.5s ease-in-out';
+  counter++;
+  slider.style.transform = 'translateX(' + (-size*counter) + 'px)';
+});
 
-nextBtn.addEventListener('click',()=>{
-    if(counter >= carouselImages.length - 1) return;
-    slider.style.transition = 'transform 0.5s ease-in-out';
-    counter++;
+prevBtn.addEventListener('click', () => {
+  if(counter <= 0) return;
+  slider.style.transition = 'transform 0.5s ease-in-out';
+  counter--;
+  slider.style.transform = 'translateX(' + (-size*counter) + 'px)';
+});
+
+
+slider.addEventListener('transitionend', (e)=>{
+  if(carouselImages[counter].id === 'lastClone'){
+    slider.style.transition = 'none';
+    counter = carouselImages.length -2;
     slider.style.transform = 'translateX(' + (-size*counter) + 'px)';
-});
-
-prevBtn.addEventListener('click',()=>{
-    if(counter <= 0) return;
-    slider.style.transition = 'transform 0.5s ease-in-out';
-    counter--;
+    console.log('last clone')
+  }
+  if(carouselImages[counter].id === 'firstClone'){
+    slider.style.transition = 'none';
+    counter = carouselImages.length - counter;
     slider.style.transform = 'translateX(' + (-size*counter) + 'px)';
+
+  }
 });
-
-
-slider.addEventListener('transitionend',()=>{
-    if(carouselImages[counter].id === 'lastClone'){
-        slider.style.transition = 'none';
-        counter = carouselImages.length -2;
-        slider.style.transform = 'translateX(' + (-size*counter) + 'px)';
-    }
-    if(carouselImages[counter].id === 'firstClone'){
-        slider.style.transition = 'none';
-        counter = carouselImages.length - counter;
-        slider.style.transform = 'translateX(' + (-size*counter) + 'px)';
-
-    }
-});
-
-console.log(carouselImages.length);
-
-
-
-
-
-
-
-
-
-// shjdk
