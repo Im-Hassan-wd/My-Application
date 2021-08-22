@@ -119,6 +119,7 @@ section.skate{
 }
 .skate-boi{
   width: 150px;
+  transform: translateX(-200px);
 }
 .skate-boi img{
   width: 100%;
@@ -150,6 +151,14 @@ section.skate{
 #contact p,
 #about-me p{
   padding: 10px;
+}
+.obj-con{
+  background: #EEE;
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  /* align-items: center; */
+  display: none;
 }
 #about-me,
 #skills {
@@ -213,13 +222,15 @@ section.resume-talent{
   margin: 50px 0;
 }
 .edu-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   padding: 30px;
   justify-content: center;
 }
 .edu-card .card{
+  padding: 0;
+  margin: 0 20px;
   max-width: 400px;
   border: 1px solid hsl(224, 36%, 15%);
   /* vertical-align: top; */
@@ -233,7 +244,12 @@ section.resume-talent{
 }
 @media (max-width: 800px){
   .edu-card{
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .edu-card .card{
+    margin: 20px 0;
+
   }
 }
 /* experience */
@@ -274,6 +290,7 @@ section.resume-talent{
 }
 #association {
   text-align: center;
+  margin-top: 70px;
   padding-top: 50px;
   padding-bottom: 20px;
   background: hsl(224, 36%, 15%);
@@ -290,4 +307,19 @@ section.resume-talent{
 }
 #association a:hover{
   letter-spacing: 1px;
+}
+#projects{
+  /* margin: 50px 0; */
+  display: none;
+}
+.project-carousel{
+  width: 800px;
+  padding: 20px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  overflow: hidden;
+}
+.project-carousel img{
+  width: 100%;
 }

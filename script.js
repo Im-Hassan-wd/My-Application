@@ -2,6 +2,8 @@ const skateSection = document.querySelector('.skate');
 const skateboarder = document.querySelector('.skate-boi');
 const burger = document.querySelector('header svg');
 const nav = document.querySelector('header ul');
+const skateBtn = document.querySelector('.title a'),
+skateMe = document.querySelector('.title p');
 
 // Navigation menu
 burger.addEventListener('click',() => {
@@ -11,7 +13,9 @@ burger.addEventListener('click',() => {
 // hide skateborder
 setTimeout(()=>{
   skateSection.classList.add('active');
-},16000);
+  skateMe.style.display = 'none';
+  skateBtn.style.display = 'none';
+},20000);
 
 // skate animation
 const showSkater = () => {
