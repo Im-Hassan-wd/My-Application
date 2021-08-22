@@ -308,18 +308,34 @@ section.resume-talent{
 #association a:hover{
   letter-spacing: 1px;
 }
-#projects{
-  /* margin: 50px 0; */
-  display: none;
-}
-.project-carousel{
-  width: 800px;
-  padding: 20px;
-  display: flex;
-  /* justify-content: center; */
-  align-items: center;
+#projects {
+  margin: 50px auto;
+  max-width: 700px;
+  position: relative;
   overflow: hidden;
 }
-.project-carousel img{
+.project-slide {
+  display: flex;
+  width: 700px;
+}
+.project-slide img {
   width: 100%;
+}
+#prevBtn {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  z-index: 10;
+  cursor: pointer;
+  filter: invert(1);
+  width: 30px;
+}
+#nextBtn {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  z-index: 10;
+  cursor: pointer;
+  filter: invert(1);
+  width: 30px;
 }
